@@ -37,7 +37,7 @@ const TodoItem = ({ todo, removeItem, editItem }) => {
           />
         </Form>
         <div>
-          <Button variant="dark" onClick={handleEditToSaveClick}>
+          <Button className='me-2' variant="dark" onClick={handleEditToSaveClick}>
             Save
           </Button>
           <Button
