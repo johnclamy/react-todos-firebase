@@ -41,7 +41,6 @@ const TodoItem = ({ todo, removeItem, editItem }) => {
             Save
           </Button>
           <Button
-            className="ml-2"
             variant="secondary"
             onClick={() => setMode(MODES[0])}
           >
