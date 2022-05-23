@@ -36,11 +36,16 @@ const TodoItem = ({ todo, removeItem, editItem }) => {
             onChange={(e) => setText(e.target.value)}
           />
         </Form>
-        <div>
-          <Button className='me-2' variant="dark" onClick={handleEditToSaveClick}>
+        <div clasName="">
+          <Button
+            className="me-2 mt-2"
+            variant="dark"
+            onClick={handleEditToSaveClick}
+          >
             Save
           </Button>
           <Button
+            className="mt-2"
             variant="secondary"
             onClick={() => setMode(MODES[0])}
           >
