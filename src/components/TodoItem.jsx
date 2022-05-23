@@ -20,7 +20,7 @@ const TodoItem = ({ todo, removeItem, editItem }) => {
             Remove
           </Button>
           <Button
-            className="ml-2"
+            className="ms-2"
             variant="warning"
             onClick={() => setMode(MODES[1])}
           >
