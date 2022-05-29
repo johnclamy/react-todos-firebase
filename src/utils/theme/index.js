@@ -32,51 +32,6 @@ const theme = {
     appCrimson: "#D90429",
   },
 
-  // Backgrounds
-  bg: {
-    primary: this.color.white,
-    secondary: this.color.appLight,
-    third: this.color.appGrey,
-    inverse: this.color.appBlue,
-  },
-
-  // Text
-  text: {
-    primary: this.color.appBlue,
-    secondary: this.color.darkGrey,
-    third: this.color.appGrey,
-    loud: this.color.appCrimson,
-  },
-
-  // Links
-  link: {
-    primary: this.color.grey,
-    primaryHover: this.color.appBlue,
-  },
-
-  // Borders
-  border: {
-    color: this.color.grey,
-    size: "1px",
-    type: "solid",
-    focus: this.color.grey,
-    colorOther: this.color.appCrimson,
-  },
-
-  // Typography
-  font: {
-    familyText: `'Poppins', sans-serif;`,
-    familyHeading: `'Lobster', cursive;`,
-    baseSize: "14px",
-    baseLineHeight: "1.6",
-  },
-
-  // Layout
-  layout: {
-    margin: "1rem",
-    padding: "1rem",
-  },
-
   // Media queries
   mediaQuery: {
     xs: `only screen and (max-width: 25em)`,
