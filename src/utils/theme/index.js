@@ -68,7 +68,7 @@ const theme = {
     familyText: `'Poppins', sans-serif;`,
     familyHeading: `'Lobster', cursive;`,
     baseSize: "14px",
-    baseLineHeight: "1.5",
+    baseLineHeight: "1.6",
   },
 
   // Layout
