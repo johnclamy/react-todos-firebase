@@ -1,16 +1,17 @@
 const theme = {
   color: {
-    // Base palette colours
+    // Base colours
     black: "#000",
     darkGrey: "#333",
     grey: "#ccc",
-    lightGrey: "#ebebeb",
+    lightGrey: "#8d99ae",
+    lighterGrey: "#edf2f4",
     offWhite: "#f5f5f5",
     white: "#fff",
     blue1: "#3498db",
     blue2: "#2980b9",
-    red1: "#e74c3c",
-    red2: "#c0392b",
+    red1: "#ef233c",
+    red2: "#d90429",
     yellow1: "#f1c40f",
     yellow2: "#f39c12",
     green1: "#2ecc71",
@@ -23,17 +24,12 @@ const theme = {
     purple2: "#8e44ad",
     navy1: "#34495e",
     navy2: "#2c3e50",
-
-    // App colours
-    appBlue: "#2B2D42",
-    appGrey: "#8D99AE",
-    appLight: "#EDF2F4",
-    appRed: "#EF233C",
-    appCrimson: "#D90429",
+    navy3: "#2b2d42",
+    shadow: "rgba(0, 0, 0, .2)",
   },
 
-  // Media queries
-  mediaQuery: {
+  // Media query signatures
+  media: {
     xs: `only screen and (max-width: 25em)`,
     sm: `only screen and (max-width: 37.5em)`,
     md: `only screen and (max-width: 56em)`,
