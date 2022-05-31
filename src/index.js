@@ -4,7 +4,7 @@ import { ThemeProvider } from 'styled-components'
 
 import theme from './utils/theme'
 import GlobalStyles from './utils/global'
-import App from './App'
+import App from './app/App'
 
 const root = document.getElementById("root");
 
