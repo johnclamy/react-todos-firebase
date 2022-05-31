@@ -1,18 +1,21 @@
 import styled from 'styled-components'
 
-// components/Logo.jsx
-const Title = styled.div`
-  display: flex;
-  align-items: center;
-  font-family: 'Lobster', cursive;
-  font-weight: 700;
-  font-size: 2.8rem;
-  text-decoration: uppercase;
-  padding: 1rem;
-  color: var(--third);
+// Global styled components
+
+const Container = styled.section`
+  width: 100%;
+  max-width: 140rem;
+  margin: 0 auto;
   height: 100%;
 `;
 
+const Main = styled.main`
+ width: 100%;
+ min-height: calc(100vh - 6rem)
+ margin-top: 6rem;
+`
+
 export {
-  Title
+  Container,
+  Main,
 }
