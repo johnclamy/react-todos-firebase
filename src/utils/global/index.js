@@ -46,7 +46,11 @@ export default createGlobalStyle`
     --loud-text: ${(props) => props.theme.color.black};
 
     // Borders
-    
+    --border-primary: #edf2f4;
+    --border-secondary: #2b2d42;
+    --border-size: 1px;
+    --border-type: solid;
+    --border-focus: #3498db;
 
     // Media queries
     @media ${(props) => props.theme.media.xs} {
