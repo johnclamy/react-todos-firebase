@@ -45,13 +45,6 @@ export default createGlobalStyle`
     --inverse-text: ${(props) => props.theme.color.white};
     --loud-text: ${(props) => props.theme.color.black};
 
-    // Borders
-    --border-primary: #edf2f4;
-    --border-secondary: #2b2d42;
-    --border-size: 1px;
-    --border-type: solid;
-    --border-focus: #3498db;
-
     // Media queries
     @media ${(props) => props.theme.media.xs} {
       font-size: 55%;
@@ -88,7 +81,7 @@ export default createGlobalStyle`
 
   h1 {
     color: black;
-    font-family: 'Lobster', cursive;
+    font-weight: 700;
     font-size: 4.8rem;
   }
 
