@@ -6,7 +6,7 @@ import NavLinks from '../components/NavLinks'
 
 const Wrapper = styled.div`
   position: fixed;
-  background-color: var(--secondary-bg);
+  background-color: var(--primary-bg);
   padding: 0 2rem;
   top: 0;
   left: 0;
