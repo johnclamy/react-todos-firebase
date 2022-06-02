@@ -16,21 +16,21 @@ const StyledNavLinkItem = styled(NavLink)`
   padding: ${(props) => (props.mobile ? ".5rem 1rem" : "1rem")};
   font-size: 1.2rem;
   font-weight: 400;
-  color: var(--secondary);
+  color: var(--dark);
   transition: all 0.2s;
 
   &hover {
     border-bottom: ${(props) =>
       props.mobile
-        ? "1px solid var(--color-white)"
-        : "2px solid var(--color-white)"};
+        ? "1px solid var(--primary)"
+        : "2px solid var(--dark)"};
   }
 
   &active {
     border-bottom: ${(props) =>
       props.mobile
-        ? "1px solid var(--color-white)"
-        : "2px solid var(--color-white)"};
+        ? "1px solid var(--primary)"
+        : "2px solid var(--dark)"};
   }
 `;
 
