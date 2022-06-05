@@ -1,17 +1,21 @@
-import { Route, Switch, /* Redirect */ } from 'react-router-dom'
-
-import Layout from '../layouts/Layout'
-import HomePage from '../pages/Home'
-import TodosPage from '../pages/Todos'
+import Header from '../components/Header';
+import Main from '../components/Main';
+import Footer from '../components/Footer';
+import { Wrapper } from '../assets/styles/Wrapper.styled'
+import { Container } from '../assets/styles/Container.styled'
+import GlobalStyles from '../assets/global';
 
 export default function App() { 
-	return (
-    <Layout>
-      <Switch>
-        <Route path='/' exact component={HomePage} />
-        <Route path='/todos' component={TodosPage} />
-        {/* <Redirect to='/' /> */}
-      </Switch>
-    </Layout>
+  return (
+    <>
+      <GlobalStyles />
+      <Wrapper>
+        <Header />
+        <Container>
+          <Main />
+        </Container>
+        <Footer />
+      </Wrapper>
+    </>
   );
 }
