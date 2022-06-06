@@ -9,6 +9,7 @@ const Todos = ({ todos = [], onSetTodos = f => f }) => {
         : todo
     )
     onSetTodos(list)
+    localStorage.setItem('todos', JSON.stringify(list))
   }
 
   const handleDeleteButtonClick = id => {
