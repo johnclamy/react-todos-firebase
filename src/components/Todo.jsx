@@ -9,7 +9,7 @@ import TrashIcon from "../assets/icons/Trash";
 const Todo = ({
   todo = {},
   onToggleCheckedState = (f) => f,
-  onDeleteButtonClick = (f) => f
+  onDeleteButtonClick = (f) => f,
 }) => (
   <StyledListItem>
     <StyledLabel>
@@ -19,14 +19,14 @@ const Todo = ({
           checked={todo.checked}
           onChange={() => onToggleCheckedState(todo.id)}
         />
-        <StyledText completed={todo.checked}>
+        <StyledText
+          completed={todo.checked}
+          onDoubleClick={() => onToggleCheckedState(todo.id)}
+        >
           {todo.task}
         </StyledText>
       </StyledInput>
-      <StyledButton
-        type="button"
-        onClick={() => onDeleteButtonClick(todo.id)}
-      >
+      <StyledButton type="button" onClick={() => onDeleteButtonClick(todo.id)}>
         <StyledTrashIcon>
           <TrashIcon />
         </StyledTrashIcon>
