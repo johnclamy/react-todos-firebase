@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { StyledMain } from '../assets/styles/Main.styled';
 import Todos from './Todos'
+import Stats from './Stats'
 
 const Main = () => {
   const [todos, setTodos] = useState([
@@ -12,6 +13,7 @@ const Main = () => {
   return (
     <StyledMain>
       <Todos todos={todos} onSetTodos={setTodos} />
+      <Stats todos={todos} />
     </StyledMain>
   );
 }
