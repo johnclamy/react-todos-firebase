@@ -6,8 +6,7 @@ export const StyledButton = styled.button`
   box-shadow:  0 0 10px rgba(0, 0, 0, 0.15);
   font-size: inherit;
   font-weight: 400;
-  padding : 4px 8px;
-  text-transform: capitalize;
+  padding : 2px 4px;
   color: ${(props) => props.textColour || "white"};
   background-color: ${(props) => props.bgColour || props.theme.text.loud};
   cursor: pointer;
