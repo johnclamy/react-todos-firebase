@@ -1,4 +1,5 @@
 import { List } from '../assets/styles/List.styled'
+import { Alert } from '../assets/styles/Alert.styled'
 import Todo from './Todo'
 import { saveAndRender } from '../helper'
 
@@ -32,7 +33,9 @@ const Todos = ({ todos = [], onSetTodos = f => f }) => {
       ))}
     </List>
   ) : (
-    <p>You do not have any todos...</p>
+    <Alert>
+      <p>You do not have any todos</p>
+    </Alert>
   );
 
   return todoList
