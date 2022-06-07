@@ -6,7 +6,7 @@ const AddTodo = ({ todos = [], onSetTodos = f => f }) => {
 
   const handleSubmit = e => { 
     e.preventDefault()
-    const id = todos[todos.length - 1].id + 1
+    const id = todos.length ? todos[todos.length - 1].id + 1 : 1
     onSetTodos([...todos, { id, checked: false, task }])
     setTask('')
   }
