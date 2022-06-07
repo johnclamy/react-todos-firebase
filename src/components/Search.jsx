@@ -1,15 +1,9 @@
-import { useState } from 'react'
 import { StyledSearch } from '../assets/styles/Search.styled'
 import { StyledSearchIcon } from '../assets/styles/SearchIcon.styled'
 import SearchIcon from '../assets/icons/Search'
 import Title from './Title'
-import { isSearched } from '../helper'
 
-const Search = ({ todos = [], onSetTodos = f => f }) => {
-  const [searchTerm, setSearchTerm] = useState('')
-
-  console.log(searchTerm)
-
+const Search = ({ searchTerm = '', onSetSearchTerm = f => f }) => {
   return (
     <>
       <Title title="search" />
@@ -19,7 +13,7 @@ const Search = ({ todos = [], onSetTodos = f => f }) => {
           type="text"
           value={searchTerm}
           placeholder="search all todos..."
-          onChange={(e) => setSearchTerm(e.target.value)}
+          onChange={(e) => onSetSearchTerm(e.target.value)}
         />
         <button type="button">
           <StyledSearchIcon>
