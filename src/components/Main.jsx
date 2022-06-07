@@ -5,11 +5,7 @@ import Stats from './Stats'
 import AddTodo from './AddTodo'
 
 const Main = () => {
-  const [todos, setTodos] = useState([
-    { id: 1, checked: true, task: "walk the dog" },
-    { id: 2, checked: false, task: "cook breakfast" },
-    { id: 3, checked: false, task: "go to work" },
-  ]);
+  const [todos, setTodos] = useState(JSON.parse(localStorage.getItem('todos')));
 
   return (
     <StyledMain>
