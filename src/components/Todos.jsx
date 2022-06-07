@@ -1,20 +1,18 @@
 import { List } from '../assets/styles/List.styled'
 import { Alert } from '../assets/styles/Alert.styled'
+import { saveAndRender } from "../helper";
 import Title from './Title'
 import Todo from './Todo'
-import { saveAndRender } from '../helper'
 
-const Todos = ({ todos = [], onSetTodos = f => f }) => {
-  const handleToggleCheckedState = id => {
-    const list = todos.map(
-      todo => todo.id === id
-        ? { ...todo, checked: !todo.checked }
-        : todo
-    )
-    saveAndRender(onSetTodos, 'todos', list)
-  }
+const Todos = ({ todos = [], onSetTodos = (f) => f }) => {
+  const handleToggleCheckedState = (id) => {
+    const list = todos.map((todo) =>
+      todo.id === id ? { ...todo, checked: !todo.checked } : todo
+    );
+    saveAndRender(onSetTodos, "todos", list);
+  };
 
-  const handleDeleteButtonClick = id => {
+  const handleDeleteButtonClick = (id) => {
     saveAndRender(
       onSetTodos,
       "todos",
@@ -41,10 +39,10 @@ const Todos = ({ todos = [], onSetTodos = f => f }) => {
 
   return (
     <>
-      <Title title='todo list' />
+      <Title title="todo list" />
       {todoList}
     </>
   );
-}
+};
 
 export default Todos
