@@ -1,9 +1,9 @@
 import { StyledTitle } from '../assets/styles/Title.styled'
 
-const Title = () => (
+const Title = ({title}) => (
   <header>
     <StyledTitle>
-      add a todo
+      {title}
       <hr />
     </StyledTitle>
   </header>
