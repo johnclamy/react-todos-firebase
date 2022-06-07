@@ -16,7 +16,7 @@ const AddTodo = ({ todos = [], onSetTodos = f => f }) => {
  
   return (
     <>
-      <Title />
+      <Title title='add a todo' />
       <StyledForm onSubmit={handleSubmit}>
         <input
           autoFocus

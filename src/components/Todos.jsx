@@ -1,5 +1,6 @@
 import { List } from '../assets/styles/List.styled'
 import { Alert } from '../assets/styles/Alert.styled'
+import Title from './Title'
 import Todo from './Todo'
 import { saveAndRender } from '../helper'
 
@@ -38,7 +39,12 @@ const Todos = ({ todos = [], onSetTodos = f => f }) => {
     </Alert>
   );
 
-  return todoList
+  return (
+    <>
+      <Title title='todo list' />
+      {todoList}
+    </>
+  );
 }
 
 export default Todos
