@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { StyledMain } from '../assets/styles/Main.styled';
 import { isSearched } from '../helper'
 import Todos from './Todos'
@@ -7,10 +7,15 @@ import AddTodo from './AddTodo'
 import Search from "./Search";
 
 const Main = () => {
-  const [todos, setTodos] = useState(
-    JSON.parse(localStorage.getItem('todos'))
-  );
   const [searchTerm, setSearchTerm] = useState("");
+  const [todos, setTodos] = useState(
+    JSON.parse(localStorage.getItem("todos")) || []
+  );
+
+  useEffect(() => {
+    localStorage.setItem('todos', JSON.stringify(todos));
+  }, [todos]
+  )
 
   return (
     <StyledMain>

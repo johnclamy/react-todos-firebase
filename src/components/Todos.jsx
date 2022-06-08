@@ -1,6 +1,5 @@
 import { List } from '../assets/styles/List.styled'
 import { Alert } from '../assets/styles/Alert.styled'
-import { saveAndRender } from "../helper";
 import Title from './Title'
 import Todo from './Todo'
 
@@ -9,15 +8,11 @@ const Todos = ({ todos = [], onSetTodos = (f) => f }) => {
     const list = todos.map((todo) =>
       todo.id === id ? { ...todo, checked: !todo.checked } : todo
     );
-    saveAndRender(onSetTodos, "todos", list);
+    onSetTodos(list)
   };
 
   const handleDeleteButtonClick = (id) => {
-    saveAndRender(
-      onSetTodos,
-      "todos",
-      todos.filter((todo) => todo.id !== id)
-    );
+    onSetTodos(todos.filter((todo) => todo.id !== id));
   };
 
   const todoList = todos.length ? (
