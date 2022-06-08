@@ -15,22 +15,17 @@ const Main = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
 
-  const renderApp = error ?
-    <StyledError>{error}</StyledError>
-    : (isLoading ?
-      <StyledLoading>Loading data...</StyledLoading>
-      : (
-      <>      
-        <Search searchTerm={searchTerm} onSetSearchTerm={setSearchTerm} />
-        <AddTodo todos={todos} onSetTodos={setTodos} />
-        <Todos
-          todos={todos.filter(isSearched(searchTerm))}
-          onSetTodos={setTodos}
-        />
-        <Stats todos={todos} />
-      </>
-      )
-    );
+  const renderTodos = isLoading ?
+    <StyledLoading>Loading data...</StyledLoading> : (    
+    error ? <StyledError>{error}</StyledError> : (
+    <>
+      <Todos
+        todos={todos.filter(isSearched(searchTerm))}
+        onSetTodos={setTodos}
+      />
+      <Stats todos={todos} />
+    </>)
+  )
 
   // Load data from RESTful API on initialization
   useEffect(() => {
@@ -39,7 +34,13 @@ const Main = () => {
     }, 2000)
   }, [])
 
-  return <StyledMain>{renderApp}</StyledMain>;
+  return (
+    <StyledMain>
+      <Search searchTerm={searchTerm} onSetSearchTerm={setSearchTerm} />
+      <AddTodo todos={todos} onSetTodos={setTodos} />
+      {renderTodos}
+    </StyledMain>
+  );
 }
 
 export default Main
