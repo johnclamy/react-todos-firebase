@@ -1,16 +1,18 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import { StyledForm } from '../assets/styles/Form.styled'
 import { saveAndRender } from '../helper'
 import Title from './Title'
 
 const AddTodo = ({ todos = [], onSetTodos = f => f }) => {
   const [task, setTask] = useState('');
+  const inputRef = useRef()
 
   const handleSubmit = e => { 
     e.preventDefault();
     const id = todos.length ? todos[todos.length - 1].id + 1 : 1;
     const newTodos = [...todos, { id, checked: false, task }];
     saveAndRender(onSetTodos, 'todos', newTodos);
+    inputRef.current.focus()
     setTask('');
   }
  
@@ -20,6 +22,7 @@ const AddTodo = ({ todos = [], onSetTodos = f => f }) => {
       <StyledForm onSubmit={handleSubmit}>
         <input
           autoFocus
+          ref={inputRef}
           type="text"
           value={task}
           onChange={(e) => setTask(e.target.value)}
