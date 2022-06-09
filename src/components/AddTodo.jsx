@@ -1,23 +1,33 @@
 import { useState, useRef } from 'react'
 import { StyledForm } from '../assets/styles/Form.styled'
+import { requestData, setOption } from '../api'
 import Title from './Title'
 
-const AddTodo = ({ todos = [], onSetTodos = f => f }) => {
-  const [task, setTask] = useState('');
-  const inputRef = useRef()
+const AddTodo = ({
+  todos = [],
+  onSetTodos = (f) => f,
+  onSetError = (f) => f,
+}) => {
+  const [task, setTask] = useState("");
+  const inputRef = useRef();
 
-  const handleSubmit = e => { 
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const id = todos.length ? todos[todos.length - 1].id + 1 : 1;
-    const newTodos = [...todos, { id, checked: false, task }];
-    onSetTodos(newTodos)
-    inputRef.current.focus()
-    setTask('');
-  }
- 
+    const newTodo = { id, checked: false, task };
+    const failedPostRequest = await requestData(setOption("POST", newTodo));
+
+    onSetTodos([...todos, newTodo]);
+    inputRef.current.focus();
+    setTask("");
+    if (failedPostRequest) {
+      onSetError(failedPostRequest);
+    }
+  };
+
   return (
     <>
-      <Title title='add a todo' />
+      <Title title="add a todo" />
       <StyledForm onSubmit={handleSubmit}>
         <input
           autoFocus
@@ -32,6 +42,6 @@ const AddTodo = ({ todos = [], onSetTodos = f => f }) => {
       </StyledForm>
     </>
   );
-}
+};
 
 export default AddTodo
