@@ -1,6 +1,3 @@
-const isSearched = term => item =>
-  !term || item.task.toLowerCase().includes(term.toLowerCase())
-
 const fetchData = async (url, setData, setError, setIsLoading) => {
   try {
     const resp = await fetch(url);
@@ -9,15 +6,12 @@ const fetchData = async (url, setData, setError, setIsLoading) => {
     }
     const rslt = await resp.json();
     setData(rslt);
-    setError('');
+    setError("");
   } catch (err) {
     setError(err.message);
   } finally {
-    setIsLoading(false)
+    setIsLoading(false);
   }
 };
 
-export {
-  fetchData,
-  isSearched,
-};
+export { fetchData };
