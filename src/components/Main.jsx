@@ -2,12 +2,15 @@ import { useState, useEffect } from "react";
 import { StyledLoading } from '../assets/styles/Loading.styles';
 import { StyledMain } from '../assets/styles/Main.styled';
 import { StyledError } from "../assets/styles/Error.styled";
-import { fetchData, isSearched } from '../helper'
+import { fetchData } from '../api'
 import { TODOS_API_URL } from "../constants";
 import Todos from './Todos'
 import Stats from './Stats'
 import AddTodo from './AddTodo'
 import Search from "./Search";
+
+const isSearched = (term) => (item) =>
+  !term || item.task.toLowerCase().includes(term.toLowerCase());
 
 const Main = () => {
   const [todos, setTodos] = useState([]);
