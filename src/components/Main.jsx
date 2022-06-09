@@ -2,8 +2,7 @@ import { useState, useEffect } from "react";
 import { StyledLoading } from '../assets/styles/Loading.styles';
 import { StyledMain } from '../assets/styles/Main.styled';
 import { StyledError } from "../assets/styles/Error.styled";
-import { fetchData } from '../api'
-import { TODOS_API_URL } from "../constants";
+import { fetchData } from "../api";
 import Todos from './Todos'
 import Stats from './Stats'
 import AddTodo from './AddTodo'
@@ -33,14 +32,21 @@ const Main = () => {
   // Load data from RESTful API on initialization
   useEffect(() => {
     setTimeout(() => {
-      fetchData(TODOS_API_URL, setTodos, setError, setIsLoading);
+      fetchData(setTodos, setError, setIsLoading);
     }, 2000)
   }, [])
 
   return (
     <StyledMain>
-      <Search searchTerm={searchTerm} onSetSearchTerm={setSearchTerm} />
-      <AddTodo todos={todos} onSetTodos={setTodos} />
+      <Search
+        searchTerm={searchTerm}
+        onSetSearchTerm={setSearchTerm}
+      />
+      <AddTodo
+        todos={todos}
+        onSetTodos={setTodos}
+        onSetError={setError}
+      />
       {renderTodos}
     </StyledMain>
   );
