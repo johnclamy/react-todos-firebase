@@ -43,5 +43,35 @@ export default createGlobalStyle`
   body {
     font-family: "Oswald", "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+  }
+
+  a,
+  button {
+    cursor: pointer;
+  }
+
+  a,
+  input,
+  textarea,
+  button {
+    outline: none;
+    text-decoration: none;
+    font-family: inherit;
+  }
+
+  a,
+  a:link {
+    color: var(--primary);
+  }
+
+  a:visited {
+    color: var(--gray);
+  }
+
+  a:hover,
+  a:active {
+    color: var(--secondary);
   }
 `;
