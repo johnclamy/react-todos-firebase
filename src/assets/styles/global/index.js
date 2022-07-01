@@ -61,17 +61,7 @@ export default createGlobalStyle`
     font-family: inherit;
   }
 
-  a,
-  a:link {
-    color: var(--primary);
-  }
-
-  a:visited {
-    color: var(--gray);
-  }
-
-  a:hover,
-  a:active {
-    color: var(--secondary);
+  img {
+    width: 100%;
   }
 `;
