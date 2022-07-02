@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 const StyledDrawerContainer = styled.section`
   position: fixed;
-  background-color: var(--primary);
+  background-color: var(--secondary);
   padding: 0rem 2rem;
   z-index: 10;
   top: 0;
