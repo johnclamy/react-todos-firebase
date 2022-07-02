@@ -13,7 +13,7 @@ const StyledDrawerIcon = styled.div`
     position: absolute;
     height: 4.5px;
     width: 100%;
-    background: var(--color-white);
+    background: var(--white);
     border-radius: 9px;
     opacity: 1;
     left: 0;
