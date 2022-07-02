@@ -19,10 +19,10 @@ const theme = {
 
   // media queries
   media: {
-    xs: "(max-width: 320px)",
-    sm: "(max-width: 550px)",
-    md: "(max-width: 768px)",
-    lg: "(max-width: 960px)",
+    xs: "(max-width: 575px)",
+    sm: "(max-width: 767px)",
+    md: "(max-width: 991px)",
+    lg: "(max-width: 1200px)",
   },
 };
 
