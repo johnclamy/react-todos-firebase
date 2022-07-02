@@ -13,7 +13,7 @@ const StyledDrawerIcon = styled.div`
     position: absolute;
     height: 4.5px;
     width: 100%;
-    background: var(--white);
+    background: #f1faee;
     border-radius: 9px;
     opacity: 1;
     left: 0;
@@ -39,8 +39,8 @@ const StyledDrawerIcon = styled.div`
     }
     &:nth-child(4) {
       top: ${({ isDrawerShown }) => (isDrawerShown ? "9px" : "18px")};
-      width: ${({ isDrawerShown }) => (isDrawerShown  ? "0%" : "100%")};
-      left: ${({ isDrawerShown  }) => (isDrawerShown ? "50%" : null)};
+      width: ${({ isDrawerShown }) => (isDrawerShown ? "0%" : "100%")};
+      left: ${({ isDrawerShown }) => (isDrawerShown ? "50%" : null)};
     }
   }
 `;
