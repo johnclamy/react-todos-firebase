@@ -15,6 +15,7 @@ export default createGlobalStyle`
   }
 
   html {
+    height: 100%;
     font-size: 62.5%;
     box-sizing: border-box;
 
@@ -43,6 +44,9 @@ export default createGlobalStyle`
   body {
     font-family: "Oswald", "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
     font-weight: 400;
     line-height: 1.6;
   }
