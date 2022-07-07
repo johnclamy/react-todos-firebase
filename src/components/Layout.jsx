@@ -1,4 +1,5 @@
 import StyledWrapper from "../assets/styles/components/StyledWrapper";
+import StyledContainer from "../assets/styles/components/StyledContainer";
 import StyledMain from "../assets/styles/components/StyledMain";
 import StyledFooterWrapper from "../assets/styles/components/StyledFooterWrapper";
 import Navbar from "./Navbar"
@@ -12,9 +13,11 @@ const Layout = ({ children }) => (
       <Drawer />
       <StyledMain>{children}</StyledMain>
     </StyledWrapper>
-    <StyledFooterWrapper>
-      <Footer />
-    </StyledFooterWrapper>
+    <StyledContainer>
+      <StyledFooterWrapper>
+        <Footer />
+      </StyledFooterWrapper>
+    </StyledContainer>
   </>
 );
 
