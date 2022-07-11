@@ -11,7 +11,6 @@ const StyledStats = styled.span`
   b:nth-child(2) {
     background-color: var(--white);
     color: var(--primary);
-    padding-left: 5px;
     width: 18px;
     height: 18px;
     border-radius: 50%;

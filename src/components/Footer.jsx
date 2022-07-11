@@ -4,9 +4,9 @@ import Stats from './Stats'
 
 const Footer = () => (
   <StyledFooter>
-    <Stats stat={8}>Total</Stats>
-    <Stats stat={6}>Completed</Stats>
-    <Stats stat={2}>Active</Stats>
+    <Stats stat={12}>Total</Stats>
+    <Stats stat={4}>Completed</Stats>
+    <Stats stat={8}>Active</Stats>
   </StyledFooter>
 );
 
